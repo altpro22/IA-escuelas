@@ -1,0 +1,253 @@
+/* 
+   ESTILOS SMART CARD - CONECTA ALT PRO
+   VERSION: TOTAL, ROBUSTA Y CORREGIDA (VERTICAL OPTIMIZED)
+*/
+
+:root {
+    --brand-ink: #000000;
+    --brand-gold: #d4af37;
+    --brand-accent: #FFFFFF;
+    --bg-premium: #000000;
+    --text-white: #ffffff;
+    --text-muted: rgba(255,255,255,0.7);
+    --shadow-premium: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    -webkit-tap-highlight-color: transparent; 
+}
+
+body { 
+    background-color: var(--bg-premium); 
+    font-family: 'Montserrat', sans-serif; 
+    color: var(--text-white); 
+    overflow-x: hidden; 
+    width: 100%; 
+    height: 100vh;
+}
+
+/* ANIMACIÓN SILVER SHINE */
+.silver-shine {
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.8));
+    animation: shine 3s infinite;
+}
+@keyframes shine {
+    0% { filter: brightness(1) drop-shadow(0 0 5px white); }
+    50% { filter: brightness(1.5) drop-shadow(0 0 15px white); }
+    100% { filter: brightness(1) drop-shadow(0 0 5px white); }
+}
+
+/* CONTENEDOR PRINCIPAL - VERTICAL SIN SCROLL */
+.main-hub { 
+    height: 100vh; 
+    width: 100%;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-start; 
+    padding: 10px 20px; 
+    background: radial-gradient(circle at center, #333333 0%, #000000 100%); 
+}
+
+/* CABECERA */
+.hub-header { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    margin-bottom: 5px; 
+    width: 100%; 
+    max-width: 350px; 
+}
+.agency-logo { width: 45px; height: auto; }
+.agency-name { color: white; font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 0.9rem; line-height: 1.1; }
+.agency-slogan { color: var(--text-muted); font-size: 0.55rem; font-style: italic; }
+
+/* TARJETA USUARIO */
+.user-card { 
+    background: white; 
+    padding: 10px; 
+    border-radius: 20px; 
+    border: 3px solid var(--brand-gold); 
+    text-align: center; 
+    width: 100%; 
+    max-width: 260px; 
+    margin-bottom: 5px;
+    box-shadow: var(--shadow-premium); 
+}
+.vip-client-name { font-family: 'Orbitron', sans-serif; color: var(--brand-ink); font-size: 1.1rem; margin-bottom: 5px; font-weight: 900; }
+
+/* FOTO PRINCIPAL */
+.main-photo-wrapper { 
+    position: relative; 
+    height: 195px; 
+    background: #f0f0f0; 
+    border-radius: 12px;
+    overflow: hidden;
+}
+.vip-photo { width: 100%; height: 100%; object-fit: contain; }
+.vip-badge { 
+    position: absolute; 
+    bottom: -6px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background: var(--brand-ink); 
+    color: var(--brand-gold); 
+    padding: 5px 12px; 
+    font-weight: 800; 
+    font-size: 0.55rem; 
+    border-radius: 50px; 
+    border: 1px solid var(--brand-gold); 
+    z-index: 10; 
+    font-family: 'Orbitron'; 
+}
+
+/* BOTÓN COMPARTIR */
+.btn-share-passionate { 
+    background: linear-gradient(135deg, #000000 0%, #333333 100%); 
+    color: var(--brand-gold); 
+    border: 2px solid var(--brand-gold); 
+    padding: 12px 20px; 
+    border-radius: 50px; 
+    font-weight: 900; 
+    font-size: 0.65rem; 
+    margin-top: 8px; 
+    text-transform: uppercase; 
+    font-family: 'Orbitron'; 
+}
+
+/* MENÚ ACCESO RÁPIDO */
+.quick-access-menu { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 6px; 
+    width: 100%; 
+    max-width: 350px; 
+    margin-top: 12px; 
+    padding: 10px; 
+    background: rgba(255,255,255,0.1); 
+    border-radius: 18px; 
+    border: 1px solid var(--brand-gold); 
+}
+.menu-item { background: none; border: none; color: var(--text-white); display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.menu-item i { 
+    background: var(--brand-gold); 
+    width: 38px; 
+    height: 38px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 1rem; 
+    border-radius: 50%; 
+    color: black; 
+}
+.menu-item span { font-size: 0.42rem; font-weight: 800; text-transform: uppercase; text-align: center; }
+
+/* REDES SOCIALES */
+.social-contact-wrapper { 
+    width: 100%; 
+    max-width: 350px; 
+    margin-top: 12px; 
+    text-align: center; 
+}
+.social-title { color: white; font-family: 'Orbitron'; font-weight: 800; font-size: 0.65rem; margin-bottom: 8px; display: block; }
+.social-contact-hub { display: flex; justify-content: center; align-items: center; gap: 12px; }
+.social-btn { width: 48px; height: 48px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; }
+
+.yt-style i { color: #FF0000; }
+.wa-style i { color: #25D366; }
+.web-style i { color: #000000; }
+
+/* OVERLAYS DE CONTENIDO */
+.content-overlay { 
+    position: fixed; 
+    inset: 0; 
+    background: rgba(0,0,0,0.98); 
+    z-index: 1000; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 70px 20px 20px 20px; 
+    overflow-y: auto; 
+}
+
+/* CORRECCIÓN: TÍTULO ARRIBA DE IMÁGENES (FLUJO VERTICAL) */
+.tab-pane { 
+    width: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+.pane-title { 
+    font-family: 'Orbitron'; 
+    color: white; 
+    font-size: 1.2rem; 
+    margin-bottom: 20px; 
+    text-align: center; 
+    width: 100%; 
+    padding-bottom: 10px; 
+    border-bottom: 2px solid var(--brand-gold); 
+}
+
+/* GRILLAS DE GALERÍA */
+.premium-photo-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px; 
+    width: 100%; 
+    max-width: 360px; 
+}
+.premium-photo-item { 
+    background: white; 
+    padding: 5px; 
+    border-radius: 12px; 
+    border: 3px solid var(--brand-gold); 
+    height: 150px; 
+}
+.premium-photo-item img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; }
+
+/* MODAL Y CONCURSO IA - DISEÑO RESTAURADO */
+.overlay-modal { position: fixed; inset: 0; background: rgba(0,0,0,0.9); display: flex; align-items: center; justify-content: center; z-index: 5000; padding: 20px; }
+.modal-card-premium { background: white; padding: 30px 15px; border-radius: 30px; width: 100%; max-width: 340px; text-align: center; border: 6px solid var(--brand-gold); position: relative; }
+.btn-close-modal { position: absolute; top: -15px; right: -15px; background: var(--brand-gold); color: black; width: 40px; height: 40px; border-radius: 50%; border: 3px solid white; font-size: 1.5rem; }
+
+/* FORMULARIO ROBUSTO */
+.concurso-form-container { width: 100%; max-width: 350px; padding-bottom: 40px; }
+.form-group-box { background: rgba(255,255,255,0.1); border-radius: 15px; padding: 15px; margin-bottom: 15px; border: 1px solid rgba(255,255,255,0.2); text-align: left; }
+.input-label { display: block; font-size: 0.7rem; font-weight: 800; color: var(--brand-gold); margin-bottom: 8px; text-transform: uppercase; font-family: 'Orbitron'; }
+.input-field { width: 100%; padding: 12px; border-radius: 8px; border: none; margin-bottom: 10px; font-family: 'Montserrat'; font-size: 0.9rem; background: white; color: #333; }
+
+.legal-contract-box { 
+    background: white; 
+    border-radius: 12px; 
+    padding: 15px; 
+    color: #333; 
+    font-size: 0.75rem; 
+    line-height: 1.4; 
+    margin-bottom: 20px; 
+    text-align: justify; 
+    max-height: 150px; 
+    overflow-y: auto; 
+    border: 1px solid #ddd;
+}
+
+.checkbox-container { display: flex; align-items: flex-start; gap: 10px; font-weight: 800; font-size: 0.7rem; color: white; cursor: pointer; margin-top: 10px; }
+.checkbox-container input { margin-top: 2px; }
+
+.btn-send-concurso { 
+    width: 100%; 
+    padding: 16px; 
+    border-radius: 50px; 
+    border: 2px solid white; 
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); 
+    color: white; 
+    font-family: 'Orbitron'; 
+    font-weight: 800; 
+    font-size: 0.9rem; 
+    cursor: pointer; 
+    margin-top: 10px;
+}
+
+.btn-close-overlay { position: absolute; top: 15px; right: 15px; background: var(--brand-gold); color: black; width: 40px; height: 40px; border-radius: 50%; border: none; font-weight: 900; z-index: 1100; }
